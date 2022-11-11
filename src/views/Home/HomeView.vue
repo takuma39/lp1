@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import MainHero from "@/components/layouts/hero/MainHeroComponent.vue";
-import Section from "./components/SectionComponent.vue";
 import Sns from "@/components/parts/sns/SnsComponent.vue";
+
+import Hero from "./components/HeroComponent.vue";
+import MainHeading from "./components/MainHeadingComponent.vue";
+import Info from "./components/InfoComponent.vue";
+import Gallery from "./components/GalleryComponent.vue";
+import Access from "./components/AccessComponent.vue";
+import Contact from "./components/ContactComponent.vue";
 </script>
 
 <template>
   <main>
-    <MainHero />
-    <Section />
+    <Hero />
+    <MainHeading />
+    <Info />
+    <Gallery />
+    <Access />
+    <Contact />
     <Sns url="/" title="test" description="test" />
   </main>
 </template>
