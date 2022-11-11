@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
 let open = ref<boolean>(false);
 </script>
 
@@ -9,20 +8,23 @@ let open = ref<boolean>(false);
     <span></span><span></span><span></span>
   </div>
 
-  <div class="spMenu" v-bind:class="{ 'is-active': open }">
-    <div class="spMenu__item">
-      <router-link to="/" v-on:click="open = !open">Home</router-link>
-    </div>
-    <div class="spMenu__item">
-      <router-link to="/" v-on:click="open = !open">Concept</router-link>
-    </div>
-    <div class="spMenu__item">
-      <router-link to="/" v-on:click="open = !open">Product</router-link>
-    </div>
-    <div class="spMenu__item">
-      <router-link to="/" v-on:click="open = !open">Shop</router-link>
-    </div>
-  </div>
+  <ul class="spMenu" v-bind:class="{ 'is-active': open }">
+    <li class="spMenu__item">
+      <a href="#app" v-smooth-scroll v-on:click="open = !open">top</a>
+    </li>
+    <li class="spMenu__item">
+      <a href="#information" v-smooth-scroll v-on:click="open = !open">information</a>
+    </li>
+    <li class="spMenu__item">
+      <a href="#gallery" v-smooth-scroll v-on:click="open = !open">gallery</a>
+    </li>
+    <li class="spMenu__item">
+      <a href="#access" v-smooth-scroll v-on:click="open = !open">access</a>
+    </li>
+    <li class="spMenu__item">
+      <a href="#contact" v-smooth-scroll v-on:click="open = !open">contact</a>
+    </li>
+  </ul>
 </template>
 
 <style lang="scss" scoped>
@@ -38,12 +40,7 @@ let open = ref<boolean>(false);
   width: 50px;
   height: 50px;
   transition: all 0.4s;
-  display: none;
 
-  // $break4: 768;
-  @include mq(u-br4) {
-    display: block;
-  }
   span {
     display: inline-block;
     transition: all 0.4s;
@@ -115,6 +112,7 @@ let open = ref<boolean>(false);
     width: 100%;
     height: auto;
     text-align: center;
+    text-transform: uppercase;
 
     &:nth-child(n + 2) {
       margin-top: 24px;
