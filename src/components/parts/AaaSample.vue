@@ -14,6 +14,13 @@ const props = defineProps({
 
 <style scoped lang="scss">
 @import "@/assets/sass/app2.scss";
+// $break3: 600;
+@include mq(o-br3) {
+}
+
+// $break6: 1140;
+@include mq(o-br6) {
+}
 // ブレイクポイント見本
 .test {
   // over

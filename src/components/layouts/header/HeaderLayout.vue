@@ -42,10 +42,9 @@ window.addEventListener("scroll", () => {
   padding: 0 20px;
   transition: 0.3s;
 
-  // $break4: 768;
-  @include mq(u-br4) {
-    height: 64px;
-    padding: 0 15px;
+  // $break6: 1140;
+  @include mq(o-br6) {
+    height: 80px;
   }
 
   .logo {
@@ -70,7 +69,11 @@ window.addEventListener("scroll", () => {
 
 ::v-deep(.btn) {
   @include font-size(12);
-  padding: 12px 15px;
-  padding-right: 15px + 18px;
+  padding: 12px 18px;
+
+  // $break6: 1140;
+  @include mq(o-br6) {
+    @include font-size(15);
+  }
 }
 </style>

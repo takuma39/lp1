@@ -28,7 +28,6 @@ const props = defineProps({
   font-weight: bold;
   display: inline-block;
   padding: 18px;
-  padding-right: 18px + 18px;
   transition: 0.3s;
   text-align: center;
   letter-spacing: 0.1em;
@@ -38,31 +37,9 @@ const props = defineProps({
   background-image: $color-btn;
   background-size: 200% auto;
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: 1.5em;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f0da";
-    transition: 0.3s;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    @include font-size(14);
-  }
-
   &:hover {
     text-decoration: none;
     background-position: right center;
-    &::after {
-      right: 1.2em;
-
-      // $break4: 768;
-      @include mq(u-br4) {
-        right: 1.5em;
-      }
-    }
   }
 }
 
