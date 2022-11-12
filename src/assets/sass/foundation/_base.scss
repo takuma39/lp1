@@ -10,15 +10,14 @@ html {
 }
 
 body {
-  font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-    Meiryo, sans-serif;
-  line-height: 1.8;
+  font-family: "Josefin Sans", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
   color: g.$color-text;
-  letter-spacing: 0.05em;
-  @include g.font-size(15);
-  @include g.mq(u-br4) {
-    @include g.font-size(14);
-  }
+  font-feature-settings: "palt";
+  @include g.font-size(16);
+  // @include g.mq(u-br4) {
+  //   @include g.font-size(14);
+  // }
 }
 
 a {
@@ -32,6 +31,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
 
