@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Sns from "@/components/parts/sns/SnsComponent.vue";
 
+import MV from "./components/MVComponent.vue";
 import MainHeading from "./components/MainHeadingComponent.vue";
 import Info from "./components/InfoComponent.vue";
 import Gallery from "./components/GalleryComponent.vue";
@@ -10,6 +11,7 @@ import Contact from "./components/ContactComponent.vue";
 
 <template>
   <main>
+    <MV />
     <MainHeading />
     <Info />
     <Gallery />
