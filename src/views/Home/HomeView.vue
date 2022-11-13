@@ -3,7 +3,6 @@ import Sns from "@/components/parts/sns/SnsComponent.vue";
 
 import MV from "./components/MVComponent.vue";
 import Intro from "./components/IntroComponent.vue";
-import MainHeading from "./components/MainHeadingComponent.vue";
 import Info from "./components/InfoComponent.vue";
 import Gallery from "./components/GalleryComponent.vue";
 import Access from "./components/AccessComponent.vue";
@@ -14,7 +13,6 @@ import Contact from "./components/ContactComponent.vue";
   <main>
     <MV />
     <Intro />
-    <MainHeading />
     <Info />
     <Gallery />
     <Access />
