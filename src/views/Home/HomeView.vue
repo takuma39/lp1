@@ -4,9 +4,6 @@ import Sns from "@/components/parts/sns/SnsComponent.vue";
 import MV from "./components/MVComponent.vue";
 import Intro from "./components/IntroComponent.vue";
 import Info from "./components/InfoComponent.vue";
-import Gallery from "./components/GalleryComponent.vue";
-import Access from "./components/AccessComponent.vue";
-import Contact from "./components/ContactComponent.vue";
 </script>
 
 <template>
@@ -14,9 +11,6 @@ import Contact from "./components/ContactComponent.vue";
     <MV />
     <Intro />
     <Info />
-    <Gallery />
-    <Access />
-    <Contact />
     <Sns url="/" title="test" description="test" />
   </main>
 </template>
