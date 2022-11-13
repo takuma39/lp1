@@ -74,6 +74,7 @@ window.addEventListener("scroll", () => {
   // $break6: 1140;
   @include mq(o-br6) {
     @include font-size(15);
+    padding: 15px 25px;
   }
 }
 </style>
