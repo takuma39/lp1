@@ -3,14 +3,14 @@ import Sns from "@/components/parts/sns/SnsComponent.vue";
 
 import MV from "./components/MVComponent.vue";
 import Intro from "./components/IntroComponent.vue";
-import Info from "./components/InfoComponent.vue";
+import About from "./components/AboutComponent.vue";
 </script>
 
 <template>
   <main>
     <MV />
     <Intro />
-    <Info />
+    <About />
     <Sns url="/" title="test" description="test" />
   </main>
 </template>
