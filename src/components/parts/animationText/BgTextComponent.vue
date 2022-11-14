@@ -1,8 +1,28 @@
 <script setup lang="ts">
+import { ref, onMounted } from "vue";
+const target = ref<any>();
 
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const firstEntry = entries[0];
+      if (firstEntry.isIntersecting) {
+        firstEntry.target.classList.add("bgextend");
+      } else {
+        firstEntry.target.classList.remove("bgextend");
+      }
+    },
+    {
+      root: document,
+      threshold: 0,
+      rootMargin: "0px",
+    }
+  );
+  observer.observe(target.value);
+});
 </script>
 <template>
-  <span class="bgextend bgLRextendTrigger bgLRextend">
+  <span class="bgLRextendTrigger bgLRextend" ref="target">
     <span class="bgappearTrigger bgappear">
       <span class="mv__text-bg-color">
         <slot></slot>
@@ -34,7 +54,7 @@
 }
 
 /*中の要素*/
-.bgappear {
+.bgextend .bgappear {
   opacity: 0;
   animation-name: bgextendAnimeSecond;
   animation-duration: 1s;
@@ -52,7 +72,7 @@
 }
 
 /*左から右*/
-.bgLRextend::before {
+.bgextend.bgLRextend::before {
   content: "";
   position: absolute;
   width: 100%;

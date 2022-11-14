@@ -56,6 +56,9 @@ import Fade from "@/components/parts/animationFade/FadeComponent.vue";
 </template>
 <style scoped lang="scss">
 @import "@/assets/sass/app2.scss";
+.mv__textBg {
+  background-color: #fff;
+}
 
 .about {
   // $break6: 1140;

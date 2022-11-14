@@ -1,7 +1,29 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+const target = ref<any>();
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const firstEntry = entries[0];
+      if (firstEntry.isIntersecting) {
+        firstEntry.target.classList.add("fadeUp");
+      } else {
+        firstEntry.target.classList.remove("fadeUp");
+      }
+    },
+    {
+      root: document,
+      threshold: 0,
+      rootMargin: "0px",
+    }
+  );
+  observer.observe(target.value);
+});
+</script>
 
 <template>
-  <div class="fadeUpEffect fadeUp">
+  <div class="fadeUpEffect" ref="target">
     <slot></slot>
   </div>
 </template>
