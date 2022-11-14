@@ -40,7 +40,7 @@
     padding: 40px 0;
 
     @if ($reverse) {
-      background-color: c.$color-primary;
+      background-color: c.$color-primary-light;
     }
   }
 
@@ -53,7 +53,7 @@
 
     @if ($reverse) {
       path {
-        fill: c.$color-primary;
+        fill: c.$color-primary-light;
       }
     }
   }
@@ -63,7 +63,7 @@
 
     @if ($reverse) {
       path {
-        fill: c.$color-primary;
+        fill: c.$color-primary-light;
       }
     }
   }

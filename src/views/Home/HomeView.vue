@@ -4,8 +4,10 @@ import Sns from "@/components/parts/sns/SnsComponent.vue";
 import MV from "./components/MVComponent.vue";
 import Intro from "./components/IntroComponent.vue";
 import About from "./components/AboutComponent.vue";
-import SectionReverse from "@/components/layouts/section/SectionReverseLayout.vue";
-import SectionNormal from "@/components/layouts/section/SectionNormal.vue";
+import Trainer from "./components/TrainerComponent.vue";
+import Studio from "./components/StudioComponent.vue";
+import Price from "./components/PriceComponent.vue";
+import Faq from "./components/FaqComponent.vue";
 </script>
 
 <template>
@@ -13,15 +15,10 @@ import SectionNormal from "@/components/layouts/section/SectionNormal.vue";
     <MV />
     <Intro />
     <About />
-    <SectionReverse>
-      <template v-slot:title-en>aaaa</template>
-      <template v-slot:title-ja>あああ</template>
-    </SectionReverse>
-
-    <SectionNormal>
-      <template v-slot:title-en>aaaa</template>
-      <template v-slot:title-ja>あああ</template>
-    </SectionNormal>
+    <Trainer />
+    <Studio />
+    <Price />
+    <Faq />
     <Sns url="/" title="test" description="test" />
   </main>
 </template>

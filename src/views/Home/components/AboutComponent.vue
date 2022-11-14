@@ -133,7 +133,7 @@ import Btn from "@/components/parts/btn/BtnComponent.vue";
 
 .about__subtitle {
   font-size: 18px;
-  color: var(--main-color);
+  color: $color-primary;
   margin-bottom: 20px;
 
   // $break6: 1140;
