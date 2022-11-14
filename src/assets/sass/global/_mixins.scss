@@ -4,3 +4,67 @@
   font-size: $size + px;
   font-size: calc($size / 16) * 1rem;
 }
+
+@mixin section() {
+  padding: 20px 0;
+
+  // $break6: 1140;
+  @include g.mq(o-br6) {
+    padding: 30px 0;
+  }
+}
+
+@mixin container() {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@mixin sectionFrame($reverse: false) {
+  .section {
+    padding: 20px 0;
+
+    // $break6: 1140;
+    @include g.mq(o-br6) {
+      padding: 30px 0;
+    }
+  }
+
+  .section__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .section__inner {
+    padding: 40px 0;
+
+    @if ($reverse) {
+      background-color: c.$color-primary;
+    }
+  }
+
+  .section__heading {
+    margin-bottom: 30px;
+  }
+
+  .section-border-top {
+    transform: translateY(1px);
+
+    @if ($reverse) {
+      path {
+        fill: c.$color-primary;
+      }
+    }
+  }
+
+  .section-border-bottom {
+    transform: translateY(-1px);
+
+    @if ($reverse) {
+      path {
+        fill: c.$color-primary;
+      }
+    }
+  }
+}

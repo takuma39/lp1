@@ -1,29 +1,17 @@
 <script setup lang="ts">
 import { computed } from "vue";
 const props = defineProps({
-  color: {
+  type: {
     type: String,
     required: false,
     default: "",
   },
 });
-
-// computed
-const color = computed(() => {
-  return {
-    "--color": props.color,
-  };
-});
 </script>
-
 <template>
-  <h2
-    class="heading-primary"
-    :style="color"
-    :class="{ ' color': props.color != '' }"
-  >
+  <h2 class="heading-primary" :data-type="props.type">
     <slot name="en" />
-    <span class="heading-primary__sub">
+    <span class="heading-primary__subtitle">
       <slot name="ja" />
     </span>
   </h2>
@@ -31,30 +19,33 @@ const color = computed(() => {
 
 <style scoped lang="scss">
 @import "@/assets/sass/app2.scss";
-
 .heading-primary {
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $color-primary;
+  font-size: 40px;
+  line-height: 1;
+  color: #333;
 
-  @include font-size(36);
-  // $break4: 768;
-  @include mq(u-br4) {
-    @include font-size(30);
-  }
-
-  &.color {
-    color: var(--color);
+  // $break6: 1140;
+  @include mq(o-br6) {
+    font-size: 64px;
   }
 }
 
-.heading-primary__sub {
+.heading-primary__subtitle {
   display: block;
-  margin-top: 5px;
-  letter-spacing: 0.05em;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-top: 10px;
 
-  @include font-size(13);
+  // $break6: 1140;
+  @include mq(o-br6) {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+.heading-primary[data-type="reverse"],
+.heading-primary[data-type="reverse"] .heading-primary__subtitle {
+  color: #fff;
 }
 </style>

@@ -4,6 +4,8 @@ import Sns from "@/components/parts/sns/SnsComponent.vue";
 import MV from "./components/MVComponent.vue";
 import Intro from "./components/IntroComponent.vue";
 import About from "./components/AboutComponent.vue";
+import SectionReverse from "@/components/layouts/section/SectionReverseLayout.vue";
+import SectionNormal from "@/components/layouts/section/SectionNormal.vue";
 </script>
 
 <template>
@@ -11,6 +13,15 @@ import About from "./components/AboutComponent.vue";
     <MV />
     <Intro />
     <About />
+    <SectionReverse>
+      <template v-slot:title-en>aaaa</template>
+      <template v-slot:title-ja>あああ</template>
+    </SectionReverse>
+
+    <SectionNormal>
+      <template v-slot:title-en>aaaa</template>
+      <template v-slot:title-ja>あああ</template>
+    </SectionNormal>
     <Sns url="/" title="test" description="test" />
   </main>
 </template>
