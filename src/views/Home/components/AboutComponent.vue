@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Section from "@/components/layouts/section/SectionLayout.vue";
 import Fade from "@/components/parts/animationFade/FadeComponent.vue";
+import Btn from "@/components/parts/btn/BtnComponent.vue";
 </script>
 
 <template>
@@ -51,6 +52,9 @@ import Fade from "@/components/parts/animationFade/FadeComponent.vue";
           </Fade>
         </li>
       </ul>
+    </div>
+    <div class="about__btn">
+      <Btn link="/">無料カウンセリングを受ける</Btn>
     </div>
   </Section>
 </template>
@@ -168,10 +172,24 @@ import Fade from "@/components/parts/animationFade/FadeComponent.vue";
 .about__btn {
   margin-top: 40px;
   padding: 0 20px;
+  text-align: center;
 
   // $break6: 1140;
   @include mq(o-br6) {
     margin-top: 70px;
+  }
+}
+
+::v-deep(.btn) {
+  @include font-size(13);
+  padding: 20px;
+  padding-right: 20px + 18px;
+
+  // $break6: 1140;
+  @include mq(o-br6) {
+    @include font-size(20);
+    padding: 30px;
+    padding-right: 30px + 18px;
   }
 }
 </style>
