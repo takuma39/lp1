@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "type": "trainer",
+      "img": "trainer01.jpg",
+      "alt": "トレーナー1人め",
+      "text": "こんにちは！英語で楽しくトレーニングしましょう。日本語が話せますのでご安心ください。"
+    },
+    {
+      "id": 2,
+      "type": "trainer",
+      "img": "trainer02.jpg",
+      "alt": "トレーナー2人め",
+      "text": "Hello! 筋肉をつけすぎずしなやかな体を作ることが得意です！美しさを磨いていきましょう。"
+    },
+    {
+      "id": 3,
+      "type": "trainer",
+      "img": "trainer03.jpg",
+      "alt": "トレーナー3人め",
+      "text": "Hi, 負荷や強度の高いトレーニングがしたいならおまかせてください！どんなご要望もできるかぎり叶えますよ！"
+    },
+    {
+        "id": 4,
+        "type": "staff",
+        "img": "staff01.jpg",
+        "alt": "スタッフ1人め",
+        "text": "ENBODYは明るくてとっても楽しいジムです！みなさんのセッションが楽しくなるようしっかりサポートいたします。"
+      },
+      {
+        "id": 5,
+        "type": "staff",
+        "img": "staff02.jpg",
+        "alt": "スタッフ1人め",
+        "text": "Hi, please let me know anytime if you have any questions. We will fully support you!"
+      }
+  ]
