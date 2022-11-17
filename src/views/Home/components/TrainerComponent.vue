@@ -89,8 +89,8 @@ const changeTab = (type: string) => {
   display: grid;
   row-gap: 15px;
 
-  // $break6: 1140;
-  @include mq(o-br6) {
+  // $break3: 600;
+  @include mq(o-br3) {
     display: grid;
     column-gap: 15px;
     grid-template-columns: repeat(3, 1fr);
