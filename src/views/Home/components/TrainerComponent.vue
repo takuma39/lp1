@@ -8,18 +8,11 @@ import FadeUp from "@/components/parts/animationFade/FadeComponent.vue";
 //変数
 let tab = ref<String>("trainer");
 //クローン
-let copyPerson = reactive(JSON.parse(JSON.stringify(PersonJson)));
-
-copyPerson.value = copyPerson.filter((e: any) => {
-  return e.type === tab.value;
-});
+const copyPerson = reactive(JSON.parse(JSON.stringify(PersonJson)));
 
 //関数
 const changeTab = (type: string) => {
   tab.value = type;
-  copyPerson.value = copyPerson.filter((e: any) => {
-    return e.type === tab.value;
-  });
 };
 </script>
 
@@ -46,13 +39,15 @@ const changeTab = (type: string) => {
           </div>
         </div>
         <div class="tab__contents">
-          <FadeUp v-for="person in copyPerson.value" :key="person.id" v-cloak>
-            <Person
-              :image="`/static/images/person/${person.img}`"
-              :alt="person.alt"
-              :text="person.text"
-            />
-          </FadeUp>
+          <template v-for="person in copyPerson" :key="person.id">
+            <FadeUp v-show="tab === person.type">
+              <Person
+                :image="`/static/images/person/${person.img}`"
+                :alt="person.alt"
+                :text="person.text"
+              />
+            </FadeUp>
+          </template>
         </div>
       </div>
     </template>
@@ -60,9 +55,6 @@ const changeTab = (type: string) => {
 </template>
 <style scoped lang="scss">
 @import "@/assets/sass/app2.scss";
-[v-cloak] {
-  display: none;
-}
 .tab__area {
   display: grid;
   margin-bottom: 20px;

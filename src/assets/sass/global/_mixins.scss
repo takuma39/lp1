@@ -38,6 +38,7 @@
 
   .section__inner {
     padding: 40px 0;
+    margin-top: -3px;
 
     @if ($reverse) {
       background-color: c.$color-primary-light;
