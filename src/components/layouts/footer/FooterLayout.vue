@@ -35,7 +35,7 @@ import { RouterLink } from "vue-router";
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/sass/app2.scss";
 .footer {
   padding: 60px 30px;
