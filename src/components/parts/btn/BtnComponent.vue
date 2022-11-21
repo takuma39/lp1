@@ -32,32 +32,29 @@ const props = defineProps({
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #fff;
   border-radius: 50px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn[data-type="A"] {
+  color: #fff;
   background-image: $color-btn;
   background-size: 200% auto;
 
   &:hover {
-    text-decoration: none;
     background-position: right center;
   }
 }
 
-.btn[data-type="block"] {
-  display: block;
-  max-width: 300px;
-  margin: 0 auto;
-}
+.btn[data-type="B"] {
+  background-image: none;
+  background-color: #fff;
+  color: $color-primary;
+  transition: all 0.3s;
 
-.btn[data-type="center"] {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.btn[data-type="transparent"] {
-  border: 1px solid #fff;
-  background: none;
   &:hover {
     opacity: 0.8;
   }
