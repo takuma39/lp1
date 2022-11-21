@@ -8,6 +8,7 @@ import Trainer from "./components/TrainerComponent.vue";
 import Studio from "./components/StudioComponent.vue";
 import Price from "./components/PriceComponent.vue";
 import Faq from "./components/FaqComponent.vue";
+import Cta from "@/components/layouts/cta/CtaLayout.vue";
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Faq from "./components/FaqComponent.vue";
     <Studio />
     <Price />
     <Faq />
+    <Cta />
     <Sns url="/" title="test" description="test" />
   </main>
 </template>
