@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Sns from "@/components/parts/sns/SnsComponent.vue";
-
 import MV from "./components/MVComponent.vue";
 import Intro from "./components/IntroComponent.vue";
 import About from "./components/AboutComponent.vue";
@@ -21,7 +19,6 @@ import Cta from "@/components/layouts/cta/CtaLayout.vue";
     <Price />
     <Faq />
     <Cta />
-    <Sns url="/" title="test" description="test" />
   </main>
 </template>
 
