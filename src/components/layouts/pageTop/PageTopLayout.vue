@@ -64,7 +64,7 @@ window.addEventListener("scroll", () => {
     display: block;
     width: 50px;
     height: 50px;
-    padding: 12px;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     color: $color-primary;
