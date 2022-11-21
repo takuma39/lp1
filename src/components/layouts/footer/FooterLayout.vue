@@ -15,7 +15,7 @@ import { RouterLink } from "vue-router";
 @import "@/assets/sass/app2.scss";
 .footer {
   padding: 60px 30px;
-  background-color: #120e19;
+  background-color: $color-secondary;
 }
 
 .heading {
@@ -31,7 +31,7 @@ import { RouterLink } from "vue-router";
   @include font-size(10);
   &__link {
     text-decoration: none;
-    color: #a798b7;
+    color: #fff;
     &:hover {
       text-decoration: none;
       opacity: 0.8;
