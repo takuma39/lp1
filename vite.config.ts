@@ -6,10 +6,10 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   // 本番時はgithubリポジトリをルートパスにする
-  // base: "/vue_template",
-  // build: {
-  //   outDir: "docs",
-  // },
+  base: "/lp1",
+  build: {
+    outDir: "docs",
+  },
   plugins: [vue()],
   resolve: {
     alias: {
