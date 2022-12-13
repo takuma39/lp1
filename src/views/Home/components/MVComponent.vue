@@ -95,7 +95,7 @@ import Btn from "@/components/parts/btn/BtnComponent.vue";
   width: 70%;
   height: 410px;
   border-radius: 0 0 0 50px;
-  background-image: url(./static/images/hero/bg_mv.jpg);
+  background-image: url(/static/images/hero/bg_mv.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
