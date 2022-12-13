@@ -42,7 +42,7 @@ const changeTab = (type: string) => {
           <template v-for="person in copyPerson" :key="person.id">
             <FadeUp v-show="tab === person.type">
               <Person
-                :image="`/static/images/person/${person.img}`"
+                :image="`./static/images/person/${person.img}`"
                 :alt="person.alt"
                 :text="person.text"
               />
